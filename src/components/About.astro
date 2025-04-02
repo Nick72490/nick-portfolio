@@ -1,0 +1,176 @@
+<section class="container">
+    <div class="header">
+        <h1>About Me</h1>
+        <img src="/src/assets/pfp.jpg" alt="Profile Picture" width="250px" height="250px" class="profile-image">
+    </div>
+    
+    <div class="content">
+        <section class="bio">
+            <h2>Who I Am</h2>
+            <p>I'm a passionate web developer with a keen eye for detail and a love for creating intuitive user experiences. My journey in web development started [Your Story Here].</p>
+        </section>
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">HTML & CSS</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">Python</div>
+                <div class="skill-card">PHP</div>
+                <div class="skill-card">Astro</div>
+            </div>
+        </section>
+
+        <section class="experience">
+            <h2>Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>Education</h3>
+                    <ul>
+                        <li>Your Degree</li>
+                        <li>Your School</li>
+                        <li>Graduation Year</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <h3>Work History</h3>
+                    <ul>
+                        <li>Current Position</li>
+                        <li>Previous Role</li>
+                        <li>Internships</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="interests">
+            <h2>Interests & Hobbies</h2>
+            <div class="interests-grid">
+                <div class="skill-card">Photography</div>
+                <div class="skill-card">Travel</div>
+                <div class="skill-card">Technology</div>
+                <div class="skill-card">Gaming</div>
+            </div>
+        </section>
+    </div>
+</section>
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .profile-image {
+        border-radius: 50%;
+        margin: 2rem 0;
+        object-fit: cover;
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        color: #444;
+        margin-bottom: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        color: #555;
+        margin-bottom: 1rem;
+    }
+
+    .content {
+        display: grid;
+        gap: 4rem;
+        padding: 1rem;
+    }
+
+    .bio {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .bio p {
+        line-height: 1.6;
+    }
+
+    .experience-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .experience-card {
+        background: #f5f5f5;
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .experience-card ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .experience-card li {
+        margin: 0.5rem 0;
+    }
+
+    .interests-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .skill-card {
+        background: #f5f5f5;
+        padding: 1rem;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        .experience-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .interests-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+</style>
