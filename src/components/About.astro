@@ -10,7 +10,11 @@ import pfp from '../assets/pfp.jpg';
     <div class="content">
         <section class="bio">
             <h2>Who I Am</h2>
-            <p>I'm a passionate web developer with a keen eye for detail and a love for creating intuitive user experiences. My journey in web development started [Your Story Here].</p>
+            <p>Hi, I’m Nick Evers! I’m a passionate learner who’s been diving into the world of coding for the past year. Every day, I challenge myself to grow my skills and explore new technologies. What started as curiosity has turned into a genuine passion for problem-solving and building cool things with code.
+
+                I’m always eager to learn more, collaborate on projects, and turn ideas into reality. Whether it’s web development, app creation, or just experimenting with new tools, I love the process of bringing concepts to life.
+                
+                I’m excited about where this journey will take me, and I’m constantly looking for opportunities to learn, improve, and connect with other developers.</p>
         </section>
         <section class="skills">
             <h2>Skills</h2>
@@ -29,17 +33,8 @@ import pfp from '../assets/pfp.jpg';
                 <div class="experience-card">
                     <h3>Education</h3>
                     <ul>
-                        <li>Your Degree</li>
-                        <li>Your School</li>
-                        <li>Graduation Year</li>
-                    </ul>
-                </div>
-                <div class="experience-card">
-                    <h3>Work History</h3>
-                    <ul>
-                        <li>Current Position</li>
-                        <li>Previous Role</li>
-                        <li>Internships</li>
+                        <li>Aventus</li>
+                        <li>Still in school</li>
                     </ul>
                 </div>
             </div>
@@ -77,22 +72,23 @@ import pfp from '../assets/pfp.jpg';
     h1 {
         font-size: 3rem;
         font-weight: bold;
-        color: #333;
+        color: #f5f5f5;  /* Changed from #333 to light color */
         margin-bottom: 1rem;
     }
 
     h2 {
         font-size: 2rem;
-        color: #444;
+        color: #e0e0e0;  /* Changed from #444 to light color */
         margin-bottom: 1.5rem;
     }
 
     h3 {
         font-size: 1.5rem;
-        color: #555;
+        color: #d0d0d0;  /* Changed from #555 to light color */
         margin-bottom: 1rem;
     }
 
+    /* The text within .bio, .experience-card, and .skill-card will keep their original styling */
     .content {
         display: grid;
         gap: 4rem;
@@ -103,10 +99,15 @@ import pfp from '../assets/pfp.jpg';
         text-align: center;
         max-width: 800px;
         margin: 0 auto;
+        background: linear-gradient(145deg, #91cace2a, #91cace5b);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .bio p {
         line-height: 1.6;
+        padding: 1rem;
     }
 
     .experience-grid {
@@ -119,6 +120,7 @@ import pfp from '../assets/pfp.jpg';
         background: #91cace5b;
         padding: 1.5rem;
         border-radius: 8px;
+        text-align: center;
     }
 
     .experience-card ul {
