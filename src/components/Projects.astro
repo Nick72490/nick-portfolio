@@ -9,7 +9,8 @@
             </a>
         </div>
     </div>
-    <div class="projects-grid">
+    <h3>Newest</h3>
+    <div class="projects-grid animate__animated" data-animate="animate__fadeInRight">
         <article class="project-card" onclick="window.location.href='https://github.com/Nick72490/nick-portfolio'">
             <h3>Portfolio Website</h3>
             <p>Portfolio I made.</p>
@@ -19,7 +20,52 @@
             </div>
         </article>
     </div>
+        <div class="projects-grid animate__animated" data-animate="animate__fadeInRight">
+        <article class="project-card" onclick="window.location.href='https://github.com/Nick72490/project-laravel'">
+            <h3>Webshop</h3>
+            <p>Webshop I made for a scchool project.</p>
+            <div class="project-tech">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">Laravel</span>
+            </div>
+        </article>
+    </div>
+        </div>
+        <div class="projects-grid animate__animated" data-animate="animate__fadeInRight">
+        <article class="project-card" onclick="window.location.href='https://github.com/Nick72490/zomer-vakantie'">
+            <h3>Webshop for tickets</h3>
+            <p>Webshop for booking vacations.</p>
+            <div class="project-tech">
+                <span class="tech-tag">Jvascrypt</span>
+            </div>
+        </article>
+    </div>
 </section>
+
+<script>
+  const elements = document.querySelectorAll('[data-animate]');
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target as HTMLElement;
+          if (el.dataset.animate) {
+            el.classList.add(el.dataset.animate);
+          }
+          el.style.opacity = "1"; // make visible
+          observer.unobserve(el); // optional: animate only once
+        }
+      });
+    },
+    { threshold: 0.4 } // triggers when 40% of element is visible
+  );
+
+  elements.forEach(el => observer.observe(el));
+
+  
+</script>
+
 
 <style>
     .container {
@@ -69,6 +115,7 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
         padding: 1rem;
+        opacity: 0;
     }
 
     .project-card {
@@ -118,7 +165,7 @@
     }
 
     .github-btn {
-        background-color: #24292e;
+        background-color: #4174a6;
         color: white;
         border: none;
         border-radius: 6px;
