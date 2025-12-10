@@ -1,18 +1,5 @@
----
-import pfp from '../assets/pfp.jpg';
----
-
 <section class="container">
-    <div class="header animate__animated animate__fadeInUp">
-        <img src={pfp.src} alt="Profile Picture" width="250px" height="250px" class="profile-image">
-    </div>
-
-    <div class="content">
-        <section class="bio animate__animated" data-animate="animate__fadeInUp">
-            <h2>Who I Am</h2>
-            <p>
-            </p>
-        </section>
+<section class="wrapper">        
         <section class="skills">
             <h2>Skills</h2>
             <div class="skills-grid">
@@ -27,27 +14,26 @@ import pfp from '../assets/pfp.jpg';
         <section class="experience">
             <h2>Experience</h2>
             <div class="experience-grid">
-                <div class="experience-card">
+                <div class="experience-card animate__animated" data-animate="animate__fadeInUp">
                     <h3>Education</h3>
                     <ul>
-                        <li>Aventus</li>
-                        <li>Still in school</li>
+                        <li>Aventus (Software Developer)</li>
+                        <li>2024 - Now</li>
                     </ul>
                 </div>
             </div>
         </section>
-
         <section class="interests">
             <h2>Hobbies</h2>
             <div class="interests-grid">
-                <div class="skill-card">Mountainbiking</div>
-                <div class="skill-card">Basketball</div>
-                <div class="skill-card">Gaming</div>
+                <div class="skill-card animate__animated" data-animate="animate__fadeInRight">Mountainbiking</div>
+                <div class="skill-card animate__animated" data-animate="animate__fadeInRight">Basketball</div>
+                <div class="skill-card animate__animated" data-animate="animate__fadeInRight">Gaming</div>
             </div>
         </section>
     </div>
 </section>
-
+</section>
 <script>
   const elements = document.querySelectorAll('[data-animate]');
 
@@ -64,7 +50,7 @@ import pfp from '../assets/pfp.jpg';
         }
       });
     },
-    { threshold: 0.6 } // triggers when 60% of element is visible
+    { threshold: 0.7 } // triggers when 70% of element is visible
   );
 
   elements.forEach(el => observer.observe(el));
@@ -73,15 +59,14 @@ import pfp from '../assets/pfp.jpg';
 </script>
 
 
-
 <style>
-    .skills .skill-card:nth-child(1) { animation-delay: 0.2s; }
-    .skills .skill-card:nth-child(2) { animation-delay: 0.4s; }
-    .skills .skill-card:nth-child(3) { animation-delay: 0.6s; }
-    .skills .skill-card:nth-child(4) { animation-delay: 0.8s; }
-    .skills .skill-card:nth-child(5) { animation-delay: 1s; }
 
-
+    .wrapper {
+        display: flex;
+        gap: 200px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
     .animate__animated {
         opacity: 0;
     }
@@ -127,20 +112,7 @@ import pfp from '../assets/pfp.jpg';
         padding: 1rem;
     }
 
-    .bio {
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto;
-        background: linear-gradient(145deg, #91cace2a, #91cace5b);
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
 
-    .bio p {
-        line-height: 1.6;
-        padding: 1rem;
-    }
 
     .experience-grid {
         display: grid;
@@ -177,14 +149,12 @@ import pfp from '../assets/pfp.jpg';
     }
 
     .skill-card {
-        background: linear-gradient(145deg, #91cace5b, #91cace5b);
-        padding: 1.2rem;
+        background: rgba(255, 255, 255, 0.2); /* semi-transparent */
+        backdrop-filter: blur(10px); /* frosted glass effect */
         border-radius: 12px;
-        text-align: center;
-        font-weight: 500;
-
-
-        
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        padding: 12px 24px;
     }
 
     @media (max-width: 768px) {

@@ -1,10 +1,73 @@
+---
+import pfp from '../assets/pfp.jpg'
+---
+
 <section title="Nick's Portfolio">
     <div class="header">
-        <h1 class="animate__animated animate__backInUp animate__delay-0.5s">NICK'S PORTFOLIO</h1>
+        <h1 class="animate__animated animate__fadeInDown">NICK'S PORTFOLIO</h1>
+    </div>
+</section>
+<section class="container">
+    <div class="header animate__animated animate__fadeInLeft">
+        <img src={pfp.src} alt="Profile Picture" width="100px" height="100px" class="profile-image" style="border-radius: 12px;">
+    </div>
+    <div class="content">
+        <section class="bio animate__animated animate__fadeInRight">
+            <h2>Who I Am</h2>
+            <p>I'm Nick Evers, from the Netherlands and 17 years old. I have been coding a bit for a year and imporving allot.
+                I like working in groups and meeting new people that share the same interests as me.
+            </p>
+        </section>
     </div>
 </section>
 
 <style>
+    .container{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 250px;
+    }
+    @media (max-width: 768px) {
+        .container {
+            padding: 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        .experience-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .interests-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .bio p {
+        line-height: 1.6;
+        padding: 1rem;
+    }
+    .bio {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+        background: linear-gradient(145deg, #91cace2a, #91cace5b);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
     .header {
         text-align: center;
         margin: 4rem 0;
@@ -21,7 +84,7 @@
     .content {
         text-align: center;
         font-size: 1.2rem;
-        color: #e0e0e0;  /* Added lighter text color */
+        color: #;  /* Added lighter text color */
     }
 
     @media (max-width: 768px) {
